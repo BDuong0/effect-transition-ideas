@@ -1,0 +1,89 @@
+
+/* ===========
+    CSS Reset from https://codepen.io/kevinpowell/pen/abMdOpp?editors=0100
+   ===========  */
+
+/* makes sizing simpler */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* remove default spacing */
+/* force styling of type through styling, rather than elements */
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+/* dark mode user-agent-styles */
+/* improves punctuation in supported browsers */
+html {
+  color-scheme: dark light;
+  hanging-punctuation: first last;
+}
+
+/* min body height */
+body {
+  min-height: 100svh;
+}
+
+/* responsive images/videos */
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+/* Improved heading in supported browsers */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+/* improve readability with max-width on paragraphs and lists */
+/* prevent orphans in supported browsers */
+p,
+li {
+  max-width: var(--p-max-width, 65ch);
+  text-wrap: pretty;
+}
+
+/* === End of CSS Reset from https://codepen.io/kevinpowell/pen/abMdOpp?editors=0100 === */
+
+
+/* ===========
+    Additional img and scroll-animation reset from 
+   ===========  */
+
+img { /* Reset from https://www.youtube.com/watch?v=345V2MU3E_w */
+  font-style: italic; /* When experiencing low speed internet connection, display alt text to differentiate from normal text */
+  
+  /* low-res placeholder image technique for slow internet connection */
+  background-repeat: no-repeat; 
+  background-size: cover;
+
+  shape-margin: 1rem; /* In case where I need to use float property. Controls how much space there's between the image and other content when floated. */
+
+  max-width: 100%; /* Stop image overflow */
+  height: auto; /* Keep aspect ratio of image */
+  vertical-align: middle; /* How words wrap around an image, acting as an inline element */
+}
+
+/* If someone chooses to have no scrolling */
+
+@media (prefers-reduced-motion: no-preference) { /* Reset from https://www.youtube.com/watch?v=cCAtD_BAHNw @ 4:00 */
+    :has(:target) {
+        scroll-behavior: smooth;
+        scroll-padding-top: 3rem; /* If you have a sticky header at the top. This prevents content from scrolling under your header. */
+    }
+}
+

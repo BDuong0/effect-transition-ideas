@@ -1,0 +1,6 @@
+@import url('https://api.fontshare.com/v2/css?f[]=satoshi@500&f[]=cabinet-grotesk@800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+

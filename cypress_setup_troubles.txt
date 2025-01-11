@@ -1,0 +1,17 @@
+
+Had lots of trouble setting up Cypress with my Vite + React Typescript setup because of a reference error in the 
+cypress config file
+
+I fixed the error by changing "cypress.config.ts" -> "cypress.config.js"
+https://github.com/cypress-io/cypress/issues/24111
+- Comment by rezelute: "I can confirm that we have exactly the same issue when setting 
+type:module in package.json. Maybe someone could explain why changing cypress.config.ts to 
+cypress.config.js makes everything work?"
+- Will settle on this solution, even though I'm not sure this is the optimal 'solution' because
+  I just spent like at least an hour trying to figure out this issue and I want to spend more time
+  actually coding, instead of trying to figure out software.
+
+Chose not to fix the error by removing "type: module" from my package as a medium article by 
+Chris Castillo - "Cypress ReferenceError: exports is not defined in ES module scope (w/ Vite)"
+suggested b/c I think that the import syntax is non-negotiable for a React application
+

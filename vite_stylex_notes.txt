@@ -1,0 +1,21 @@
+The lastest version of vite-plugin-stylex at the time of writing this (Jan 4, 2025) is 0.13.0 which is
+not compatible with the latest version of vite and @stylexjs/stylex. I coudln't install vite-plugin-stylex
+version 0.13.0, until I've downgraded the @stylexjs/stylex and vite packages.
+
+From the articles and videos I've seen on the internet on how to setup StyleX with Vite, I saw all of them
+us the vite-plugin-stylex and not the PostCSS Plugin. I'm not using babel for my project, so I didn't want to use
+the StyleX PostCSS plugin anyway, because I think babel is required to use the StyleX PostCSS plugin.
+
+vite-plugin-stylex version 0.13.0 (latest version as of Jan 4, 2025). Here are the compatible dependency versions.
+- npm install --save @stylexjs/stylex@0.9.3
+- npm install --save-dev vite@5.2.7
+
+
+Thank you for this straightforward StyleX + Vite setup tutorial
+https://medium.com/@huseyinsalmansoftdev/react-stylex-vite-npm-db9be1e5c5c6
+
+Crossed reference another tutorial article I've found online
+https://www.mindbowser.com/master-react-stylex-component-guide/
+
+YouTube video cross referenced with teh tutorial article above
+https://www.youtube.com/watch?v=tK0twQfFtNU

@@ -1,0 +1,49 @@
+@import './utils/global_styles/global_tokens.css';
+@import './utils/global_styles/reset.css';
+
+
+.default-theme {
+    // Semantic Colors
+        // Semantic Naming convention
+        // category - role - state
+    
+    // --background-primary-default: $color-neutral-400; Note: I can't use SASS variables and CSS custom properties like this
+
+    // Here's my workaround
+    --background-primary-default: var(--color-neutral-400);
+    --background-primary-selected: var(--color-neutral-250);
+    --background-primary-hover: var(--color-neutral-300);
+
+    --text-primary-default: var(--color-neutral-100);
+    // --text-primary-hover: black;
+    // --text-primary-selected: black;
+
+    // --icon-primary-default: black;
+    // --icon-primary-hover: black;
+    // --icon-primary-active: black;
+    // --icon-primary-selected: black;
+}
+
+// Font Pairs and Corresponding Font Weights for each Font Family
+
+body {
+    font-family: var(--font-primary);
+    font-weight: var(--font-normal);
+    color: var(--text-primary-default);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-accent);
+    font-weight: var(--font-extrabold);
+    color: var(--text-primary-default);
+}
+
+// Override default focus state for accessibility
+:focus {
+    outline: 1px solid white;
+    outline-offset: 0.25rem;
+}
+
+
+
+
